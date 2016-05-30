@@ -1,0 +1,21 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "angular": "latest",
+    "angular-bootstrap": "latest",
+    "ui-router": "latest",
+    "ngstorage": "latest",
+    "angular-toastr": "latest",
+    "angular-scroll": "latest",
+    "angular-tooltips": "latest",
+    "angular-loading-bar": "latest",
+    "angular-base64-upload": "latest",
+    "angularjs-datepicker": "latest",
+    "satellizer": "latest",
+    "angular-animate": "latest",
+    "angular-google-maps": "latest",
+    "angular-flexslider": "latest",
+    "ngmap": "latest",
+    "angular-moment": "latest"
+  }
+}

@@ -1,0 +1,21 @@
+{:uriI"”file://app/assets/javascripts/angular/templates/results/_map.html?type=text/html&id=d3e518b6281deae26ab4bc14a7ef4069c88577e8eed54284f12478297aa497a3:ET:load_pathI"app/assets/javascripts;T:filenameI"?app/assets/javascripts/angular/templates/results/_map.html;T:	nameI"#angular/templates/results/_map;T:logical_pathI"(angular/templates/results/_map.html;T:content_typeI"text/html;T:sourceI"Ç<div id="googleMap">
+    <ng-map class=map style="height:100% !important" zoom-to-include-markers="true" zoom="12" center="[{{map.center.latitude}}, {{map.center.longitude}}]">
+        <!-- Hotel' Markers -->
+        <custom-marker ng-repeat="hotel in hotels"
+                       id="{{$index}}"
+                       position="{{hotel.latitude}}, {{hotel.longitude}}">
+            <i class="fa fa-map-marker point-details"  ng-class="{'orange-point orange': hotel.priority, 'grey-point grey': !hotel.priority  } " style="top: 400px; left: 150px;">
+            </i>
+            <div ng-click="markerClick(hotel)" class="point-info-block clearfix">
+                <div class="ind-currency">&#x20b9;</div>
+                <div class="pull-left">{{hotel.name}}</div>
+                <div class="pull-right text-center" style="margin-top:7px">{{hotel.total}}</div>
+            </div>
+        </custom-marker>
+        <!-- Hotel' Markers ends -->
+    </ng-map>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Mfile-digest://app/assets/javascripts/angular/templates/results/_map.html;TTF:charsetI"
+utf-8;F:digest"%íO­ö:Í’uHì¦Œÿ“9²Ùe“UOªZI‡~^±r:lengthiÇ:dependencies_digest"%'ÀÔ¦h×uÚ^‚± =` Ñ+Ê­|vĞŸ5CŒ:idI"Ed3e518b6281deae26ab4bc14a7ef4069c88577e8eed54284f12478297aa497a3;F:
+mtimel+¤#W

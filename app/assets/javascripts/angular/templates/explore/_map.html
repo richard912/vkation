@@ -1,0 +1,40 @@
+<div id="googleMap">
+    <ng-map class=map style="height:100% !important" zoom="8" center="[{{hotel.latitude}}, {{hotel.longitude}}]">
+        <shape name="circle"
+               radius="100000"
+               stroke-color="#F78320"
+               stroke-opacity="0.8"
+               center="[{{hotel.latitude}}, {{hotel.longitude}}]"
+        >
+        </shape>
+        <!-- Attraction' Markers -->
+        <custom-marker ng-repeat="attraction in markers"
+                       position="{{attraction.latitude}}, {{attraction.longitude}}">
+            <i class="fa fa-map-marker point-details orange-point" style="top: 400px; left: 150px;">
+            </i>
+            <div class="point-info-block clearfix">
+                <div class="ind-currency">&#x20b9;</div>
+                <div class="white-box">
+                    <a ng-click="showAttractionPopup(attraction);" style="cursor:pointer">VIEW DETAILS</a>
+                </div>
+                <div class="pull-left">{{attraction.name}}</div>
+                <div class="pull-right text-center">{{attraction.price}}<div>PER HOUR</div></div>
+            </div>
+        </custom-marker>
+        <!-- Attraction' Markers ends -->
+        <!-- Hotel Marker -->
+        <custom-marker position="{{hotel.latitude}}, {{hotel.longitude}}" on-click="showHotelPopup()">
+            <i class="fa fa-map-marker orange point-details orange-point" style="top: 400px; left: 150px;">
+            </i>
+            <div class="point-info-block clearfix">
+                <div class="ind-currency">&#x20b9;</div>
+                <div class="pull-left">{{hotel.name}}</div>
+                <div class="pull-right text-center" style="margin-top:7px">{{hotel.total}}</div>
+            </div>
+        </custom-marker>
+        <!-- Hotel Marker ends -->
+    </ng-map>
+
+    <div ng-include src="'/assets/angular/templates/explore/attraction-detail.html'" ng-show="attractionPopup"></div>
+    <div ng-include src="'/assets/angular/templates/explore/hotel-detail.html'" ng-show="hotelPopup"></div>
+</div>

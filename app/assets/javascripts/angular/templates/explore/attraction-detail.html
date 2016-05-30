@@ -1,0 +1,137 @@
+<div class="map-over map-over-small map-over-xsmall" style="max-height: 600px;overflow-y: scroll;overflow-x: hidden;display: block; right:500px; top:20px; text-align:center">
+    <div class="clear10"></div>
+    <div class="left-right-10">
+        <div class="ab-right-top-20">
+            <a ng-click="closeAttractionPopup()" style="cursor:pointer" class="close-icon">
+                <i class="fa fa-times fa-fw"></i>
+            </a>
+        </div>
+        <a href="#">
+            <img src="{{attraction.image_link}}" class="img-responsive center-block">
+        </a>
+    </div>
+    <div class="facility-detail">
+        <div class="row">
+            <div class="col-md-9">
+                <h4 class="fn-sm-left">{{attraction.name}}</h4>
+            </div>
+            <div class="col-md-3">
+                <div><strong class="xlTxt">&#x20b9;{{attraction.price}}</strong></div>
+            </div>
+        </div>
+    </div>
+    <div class="grey-bg">Distance From RESORT</div>
+    <strong>{{attraction.distance}}</strong>
+    <div class="grey-bg">VISIT TIME</div>
+    <strong>{{attraction.visit_time}}</strong>
+    <div class="grey-bg">PRICING</div>
+    <strong>&#x20b9; {{attraction.price}}</strong>
+    <div class="grey-bg">INCLUSIONS</div>
+    <strong>{{attraction.inclusions ? attraction.inclusions : "Not Available"}}</strong>
+    <div class="grey-bg">ABOUT / HIGHLIGHTS</div>
+    <p>{{attraction.about}}</p>
+    <div class="grey-bg">REVIEWS</div>
+    <strong>{{attraction.customer_reviews[0].customer_name}}</strong>
+    <div>
+        <i class="fa fa-star yellow-star" style="color:#F78320;" ng-repeat="n in [] | range:attraction.customer_reviews[0].rating"></i>
+        <i class="fa fa-star" ng-repeat="n in [] | range:5-attraction.customer_reviews[0].rating"></i>
+    </div>
+    <p>{{attraction.customer_reviews[0].reviews}}</p>
+
+    <div class="clear"></div>
+    <div class="regular-padding">
+        <a ng-show="addAttractionToCartStage == 0" ng-click="showAddAttractionToCartForm()" class="btn" style="background-color: #F78320; color:#fff;">Add to Cart</a>
+    </div>
+    <form ng-show="addAttractionToCartStage == 1" ng-submit="showAddAttractionContinueButton()" class="regular-padding">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+             <select ng-model="addAttraction.guests" class="form-control input-style">
+                 <option value="">Guests</option>
+                 <option value="1">1 Guests</option>
+                 <option value="2">2 Guests</option>
+                 <option value="3">3 Guests</option>
+                 <option value="4">4 Guests</option>
+                 <option value="5">5 Guests</option>
+                 <option value="6">6 Guests</option>
+                 <option value="7">7 Guests</option>
+                 <option value="8">8 Guests</option>
+                 <option value="9">9 Guests</option>
+                 <option value="10">10 Guests</option>
+              </select>
+            </div>
+          </div>
+           <div class="col-md-6">
+            <div class="form-group">
+              <select ng-model="addAttraction.startTime" class="form-control input-style">
+                <option value="">Start</option>
+                  <option value="07.00"> 7 A.M</option>
+                  <option value="08.00" > 8 A.M</option>
+                  <option value="09.00" > 9 A.M</option>
+                  <option value="10.00" >10 A.M</option>
+                  <option value="11.00" >11 A.M</option>
+                  <option value="12.00" >12 NOON</option>
+                  <option value="13.00" >1 P.M</option>
+                  <option value="14.00" >2 P.M</option>
+                  <option value="15.00" >3 P.M</option>
+                  <option value="16.00" >4 P.M</option>
+                  <option value="17.00" >5 P.M</option>
+                  <option value="18.00" >6 P.M</option>
+                  <option value="19.00" >7 P.M</option>
+                  <option value="20.00" >8 P.M</option>
+                  <option value="21.00" >9 P.M</option>
+                  <option value="22.00" >10 P.M</option>
+                  <option value="23.00" >11 P.M</option>
+                  <option value="24.00" >12 A.M</option>
+              </select>
+            </div>
+          </div>
+           <div class="col-md-6">
+            <div class="form-group">
+              <select ng-model="addAttraction.endTime" class="form-control input-style">
+                <option value="">End</option>
+                  <option value="07.00"> 7 A.M</option>
+                  <option value="08.00" > 8 A.M</option>
+                  <option value="09.00" > 9 A.M</option>
+                  <option value="10.00" >10 A.M</option>
+                  <option value="11.00" >11 A.M</option>
+                  <option value="12.00" >12 NOON</option>
+                  <option value="13.00" >1 P.M</option>
+                  <option value="14.00" >2 P.M</option>
+                  <option value="15.00" >3 P.M</option>
+                  <option value="16.00" >4 P.M</option>
+                  <option value="17.00" >5 P.M</option>
+                  <option value="18.00" >6 P.M</option>
+                  <option value="19.00" >7 P.M</option>
+                  <option value="20.00" >8 P.M</option>
+                  <option value="21.00" >9 P.M</option>
+                  <option value="22.00" >10 P.M</option>
+                  <option value="23.00" >11 P.M</option>
+                  <option value="24.00" >12 A.M</option>
+              </select>
+            </div>
+          </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <select ng-model="addAttraction.date" class="form-control input-style">
+                        <option value="">Select Date</option>
+                        <option value="{{date}}" ng-repeat="date in tripDates">{{date}}</option>
+                    </select>
+                </div>
+            </div>
+          <div class="regular-padding">
+            <div class="form-group">
+              <button type="submit"
+                ng-disabled="isWorking"
+                style="background-color: #F78320; color:#fff;"
+                class="btn ">
+                Submit</button>
+            </div>
+          </div>
+        </div>
+    </form>
+    <div ng-show="addAttractionToCartStage == 2" class="regular-padding">
+        <a ng-click="addAttractionToCart(attraction)" class="btn" style="background-color: #F78320; color:#fff;">Continue Booking</a>
+    </div>
+</div>
+

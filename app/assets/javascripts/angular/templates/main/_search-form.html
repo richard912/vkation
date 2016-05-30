@@ -1,0 +1,78 @@
+ <form name="serachForm" ng-submit="searchData('{{text_type}}', search, serachForm);" class="package-form" novalidate="" rc-validate>
+    <div class="maxwidth">
+        <div class="form-group">
+            <div class="col-md-3 col-sm-3">
+              <select name="place" class="form-control col-md-12" ng-model="search.place" ng-options="place.id as place.name for place in places" required>
+                  <option value="">Choose Place</option>
+              </select>
+            </div>
+
+            <div class="col-md-3 col-sm-3 datepicker-clear">
+              <datepicker date-format="dd/MM/yyyy" date-min-limit="{{startDate}}">
+                  <input name="start_date" ng-model="search.start_date" class="form-control col-md-12" type="text" placeholder="check in" ng-change="date_format();" required/>
+                </datepicker>
+            </div>
+
+            <div class="col-md-3 col-sm-3 datepicker-clear">
+              <datepicker date-min-limit="{{formated_start_date}}" date-format="dd/MM/yyyy" >
+                  <input name="end_date" ng-model="search.end_date" placeholder="check out" class="form-control col-md-12" type="text" ng-disabled="!checkInDateSelected" required/>
+                </datepicker>
+            </div>
+            <div class="col-md-3 col-sm-3 datepicker-clear">
+              <select name = "guest" class="form-control col-md-12" ng-model="search.guest" required>
+                <option value="">Choose Guest(s)</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+                <option value="9">9 Guests</option>
+                <option value="10">10 Guests</option>
+              </select>
+            </div>
+        </div>
+        <div class="clear10"></div>
+        <div class="form-group">
+            <div class="col-md-3 col-sm-3">
+              <label class="custom-label">Budget</label>
+            </div>
+            <div class="col-md-3 col-sm-3">
+              <select name="budget" class="form-control col-md-12" ng-model="search.budget" ng-options="budget.id as budget.range for budget in budgets" required>
+                <option value="">Select Budget</option>
+              </select>
+            </div>
+            <div ng-repeat="stayType in stayTypes | orderBy:'-id'">
+                <div class="col-md-3 col-sm-3">
+                    <div class="custom-bg">
+                        <div class="radio">
+                          <label>
+                            <input ng-model="search.stay_type" type="radio" name="stay_type" value="{{stayType.id}}">
+                          </label>
+                          <span class="radio-text">{{stayType.name}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear10"></div>
+        <input name="submit" type="submit" class="col-xs-12 col-sm-12 orn-btn-active text-center btn-vacation-pkg" value="CREATE YOUR VACATION PACKAGE">
+        <div class="clear10"></div>
+        <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12 white text-center" style="padding-top: 5px;">
+            <label>Choose One, more or all</label>
+        </div>
+        <div class="clear20"></div>
+    </div>  
+</form>
+<div class="maxwidth">
+    <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12">
+        <div class="resort-from">
+            <div class="clear"></div>
+        </div>
+    </div>  
+</div>
+
+<div ng-include data-src="'assets/angular/templates/main/_categories.html'">
+<div id="fade" class="black_overlay"></div>

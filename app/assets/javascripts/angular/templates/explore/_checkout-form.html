@@ -1,0 +1,86 @@
+<div class="col-md-4">
+	
+	<div class="rooms-top-rt">
+		<p class="rooms-top-rt-bx">
+			<strong class="rooms-top-rt-bx-lt">{{hotel.sub_total}}</strong>
+			<span class="rooms-top-rt-bx-rt">Per Night</span>
+		</p>
+		<form action="#">
+			<div class="col-lg-12 col-md-12 col-sm-12" style="padding:0 0 10px 0;">
+				<div class="col-lg-4 col-md-12 col-sm-12" style="padding:0 15px 0 10px;">
+					<label>Check In</label>
+					<input type="text" value="{{search.start_date}}" name="fromd" id="fromd" class="datepicker" ng-modal="search.start_date" readonly>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12" style="padding:0 15px 0 10px;">
+					<label>Check Out</label>
+					<input type="text" value="{{search.end_date}}" name="tod" id="tod" class="datepicker" ng-modal="search.start_date" readonly>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12" style="padding:0 15px 0 10px;">
+					<label>Guests</label>
+					<input type="text" value="{{search.guest}}" name="tod" id="tod" class="datepicker" ng-modal="search.guest" readonly>
+					<!-- <select name="guest" id="guest">
+						<option value="1">{{search.guest}}</option>
+					</select> -->
+				</div>
+			</div>
+			<div class="clear"></div>
+			<p class="table-row">
+				<span class="table-cell-one">INR. {{perNightPrice}} X {{nights}} Nights</span>
+				
+				<span class="table-cell-two">INR. {{perNightPrice * nights}}</span>
+			</p>
+			
+			<p class="table-row">
+				<span class="table-cell-one">Service Fee</span>
+				<span class="table-cell-two">INR. 0.00
+				</span>
+			</p>
+			
+			<p class="table-row">
+				<span class="table-cell-one">Occupancy Taxes</span>
+				<span class="table-cell-two">INR. 0.00</span>
+			</p>				
+			
+			<p class="table-row">
+				<span class="table-cell-bottom-one">Total</span>
+				<span class="table-cell-bottom-two">{{grandTotal}}</span>
+			</p>
+			
+			<p class="table-row-btn">
+				<span class="table-cell-grey-btn-lt">Added in to Cart</span>
+			</p>
+			<p class="grey-bg" ng-repeat="a in cartAttractions">{{a.date}} | {{a.info.name}} x {{a.guests}} | INR.{{a.total}} <span ng-click="removeAttractionFromCart($index)" class="fa fa-close"></span></p>
+			<p class="grey-bg" ng-repeat="t in cartTransports">{{t.date}} |  {{t.info.name}} | {{t.info.price}}/{{t.info.hours}}hrs. <span ng-click="removeTransportFromCart($index)" class="fa fa-close"></span></p>
+			<p class="table-row-main-btn">
+				<a href="" ng-click="checkout_page()" class="table-cell-main-btn">Continue</a>
+			</p>
+			<div ng-show="showTransportTypes">
+				<div class="grey-bg"><h4>ON GROUND SUPPORT</h4></div>
+				<form>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<select ng-model="addTransportation.date" class="form-control input-style">
+									<option value="">Select Date</option>
+									<option value="{{date}}" ng-repeat="date in tripDates">{{date}}</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12" ng-repeat="transport in transports">
+							<div class="form-group col-md-8">
+								<div class="radio">
+									<label>
+									<input ng-model="addTransportation.transport" type="radio" name="transport_type" value="{{$index}}">{{transport.name}}
+									</label>
+								</div>
+							</div>
+							<div class="col-md-4">{{transport.transport_type}} {{transport.price}}/{{transport.hours}}hrs</div>
+						</div>
+						<p class="table-row-main-btn col-md-12">
+							<a ng-click="addTransportToCart()" class="btn" style="background-color: #F78320; color:#fff;">Add To Cart</a>
+						</p>
+					</form>
+				</div>
+			</form>
+		</div>
+	</div>	

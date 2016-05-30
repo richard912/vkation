@@ -1,0 +1,17 @@
+<div id="googleMap">
+    <ng-map class=map style="height:100% !important" zoom-to-include-markers="true" zoom="12" center="[{{map.center.latitude}}, {{map.center.longitude}}]">
+        <!-- Hotel' Markers -->
+        <custom-marker ng-repeat="hotel in hotels"
+                       id="{{$index}}"
+                       position="{{hotel.latitude}}, {{hotel.longitude}}">
+            <i class="fa fa-map-marker point-details"  ng-class="{'orange-point orange': hotel.priority, 'grey-point grey': !hotel.priority  } " style="top: 400px; left: 150px;">
+            </i>
+            <div ng-click="markerClick(hotel)" class="point-info-block clearfix">
+                <div class="ind-currency">&#x20b9;</div>
+                <div class="pull-left">{{hotel.name}}</div>
+                <div class="pull-right text-center" style="margin-top:7px">{{hotel.total}}</div>
+            </div>
+        </custom-marker>
+        <!-- Hotel' Markers ends -->
+    </ng-map>
+</div>

@@ -1,0 +1,12 @@
+{:uriI"•file://app/assets/javascripts/angular/templates/explore/_show-transport-popup.html?type=text/html&id=d095d3956aaab92703c97b427e0872c7281fab3323f25b10d969631b788ff243:ET:load_pathI"app/assets/javascripts;T:filenameI"Papp/assets/javascripts/angular/templates/explore/_show-transport-popup.html;T:	nameI"4angular/templates/explore/_show-transport-popup;T:logical_pathI"9angular/templates/explore/_show-transport-popup.html;T:content_typeI"text/html;T:sourceI"B<div class="backdrop-custom"></div>
+
+	<div class="popup-orange">
+	<p><strong>WOULD LIKE TO ADD TRANSPORT IN YOUR VACATION.</strong></p>
+	<div class="clear10"></div>
+		<a href="" ng-click="addTransportStatus(true)" class="btn-white">YES</a>
+		<a href="" ng-click="addTransportStatus(false)" class="btn-white">NO</a>
+	</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"^file-digest://app/assets/javascripts/angular/templates/explore/_show-transport-popup.html;TTF:charsetI"
+utf-8;F:digest"%boÂsù*æ¢t~¡e¯G~ä€è£I8Ævˆ&ÃV:lengthiB:dependencies_digest"%¥À6˙$t«æàÔ≠Æø˝Â©»î1£"ÂDÅ@á:idI"Ed095d3956aaab92703c97b427e0872c7281fab3323f25b10d969631b788ff243;F:
+mtimel+§#W

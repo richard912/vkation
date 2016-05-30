@@ -1,0 +1,97 @@
+<div class="container-fluid cols-padding-adjust">
+
+<!-- 	<div class="col-md-1 col-sm-1">
+		<div class="txt">{{startDate}}</div>
+	</div> -->
+	<div class="col-md-2 col-sm-2">
+        <datepicker date-format="dd/MM/yyyy" date-min-limit="{{startDate}}">
+            <input name="start_date" ng-model="search.start_date" class="form-control col-md-12" type="text" placeholder="check in" required/>
+        </datepicker>
+	</div>
+	<div class="col-md-2 col-sm-2">
+		<datepicker date-min-limit="{{formated_start_date}}" date-format="dd/MM/yyyy">
+            <input name="end_date" ng-model="search.end_date" placeholder="check out" class="form-control col-md-12" type="text" required/>
+        </datepicker>
+	</div>
+	<div class="col-md-2 col-sm-2  datepicker-clear">
+		<!-- <select class="input-style">
+			<option value="">{{search.guest}} Guest(s)</option>
+		</select> -->
+          <select name = "guest" class="form-control col-md-12" ng-model="search.guest" required>
+            <option value="">Choose Guest(s)</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7">7 Guests</option>
+            <option value="8">8 Guests</option>
+            <option value="9">9 Guests</option>
+            <option value="10">10 Guests</option>
+          </select>
+	</div>
+	<div class="col-md-2 col-sm-2">
+		<!-- <select class="input-style">
+			<option value="">{{search.budget}}</option>
+		</select> -->
+		<div class="form-group">
+            
+            <select name="budget" class="form-control col-md-12" ng-model="search.budget" ng-options="budget.id as budget.range for budget in budgets" required plcaholder="Budget">
+                <option value="">Select Budget</option>
+            </select>
+            <!-- <div ng-repeat="stayType in stayTypes | orderBy:'-id'">
+                <div class="col-md-3 col-sm-3">
+                    <div class="custom-bg">
+                        <div class="radio">
+                          <label>
+                            <input ng-model="search.stay_type" type="radio" name="stay_type" value="{{stayType.id}}"><span class="radio-text">{{stayType.name}}</span>
+                          </label>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+	</div>
+	<div class="col-md-3 col-sm-3 text-center">
+
+		<div class="controls-icons">
+			<i class="fa fa-map-marker fa-lg"></i>
+			<i class="fa fa-stop fa-fw grey-box"></i> Instant Booking
+			<i class="fa fa-stop fa-fw orange-box"></i> Normal Booking
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+<div class="container-fluid cols-padding-adjust">
+
+	<div class="col-md-6">
+
+		<div class="form-inline">	
+			<div class="form-group">
+				<label>Customize your packages</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox">
+				</label>
+			</div>
+			<div class="form-group">
+				<select class="form-control input-style">
+					<option value="">Select Currency</option>
+				</select>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-md-6 text-right">
+		<img src="assets/flash.png" class="flash"> <div class="flash-txt">Look for the lightning flash for the faster booking.</div> 
+	</div>
+
+</div>

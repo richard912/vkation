@@ -1,0 +1,146 @@
+<div class="container-fluid">
+			
+			<div class="col-md-4 col-sm-6 col-push albums">
+
+				<div class="filters">
+					<a ng-click="moreFilters()" class="filters-toggle">MORE FILTERS</a>
+				</div>
+				<div class="filters-area" ng-show="showFilters">
+
+					<div class="row">
+
+						<div class="col-md-6" ng-repeat="cat in categories">
+							<div class="checkbox-wrapper">
+								<label>
+									<input type="checkbox" ng-click="cat.selected = !cat.selected;selectCategory($index, cat.selected );">
+									<div class="checkbox-custom" ng-class="{'checked-custom': cat.selected}"></div> <div class="cb-text">{{cat.name}}</div>
+								</label>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-md-12">
+							<h5>AMENITIES</h5>
+						</div>
+						<div class="col-md-6"  ng-repeat="amenity in amenities">
+							<div class="checkbox-wrapper">
+								<label>
+									<input type="checkbox" ng-click="amenity.selected = !amenity.selected;selectedAmenity($index, amenity.selected );">
+									<div class="checkbox-custom" ng-class="{'checked-custom': amenity.selected}"></div> <div class="cb-text">{{amenity.name}}</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+					</div>
+
+					<hr>
+					<div class="row">
+						<div class="col-md-12">
+							<img src="assets/flash.png" class="flash-2"> INSTANT BOOKING
+							<div class="clear10"></div>
+							Secure a reservation instantly
+
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-md-12 text-right">
+							<buttton class="btn btn-default btn-orange filters-toggle" ng-click="showFilters = false;">CANCEL</buttton>
+							<buttton class="btn btn-default btn-orange" ng-click="getHotels();">APPLY FILTERS</buttton>
+						</div>
+					</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="clear20"></div>
+
+
+
+
+
+				<div class="photo-block-wrapper" ng-repeat="hotel in hotels">
+					<div class="photo-block relative" ng-click="markerClick(hotel)">
+
+						<!-- <img src="assets/40.png" class="save-badge"> -->
+						<img src="assets/love.png" class="love-badge">
+
+						<div class="info-block">
+							<img src="assets/rupee_symbol.png" class="currency-sign">
+							<div class="price">{{hotel.total}}</div>
+							<div class="time">PER NIGHT</div>
+						</div>
+
+						<div class="flexslider12">
+							<div class="flexslider2">
+								<ul class="slides2">
+									<li>
+										<img src="assets/krr_303.png" class="img-responsive center-block">
+									</li>
+								</ul>
+							</div>
+						</div>
+
+
+
+
+					</div>
+
+					<div class="item-title"><h4>{{hotel.name}}</h4></div>
+
+					<div class="ratings">
+						<div class="pull-left">
+							Tripadvisor 
+							<i class="fa fa-star yellow-star" ng-repeat="n in [] | range:hotel.rating"></i>
+							<i class="fa fa-star" ng-repeat="n in [] | range:5-hotel.rating"></i>
+						</div>
+						<div class="pull-left margin-left-10">
+							Our Rating 
+							<i class="fa fa-star yellow-star" ng-repeat="n in [] | range:hotel.our_rating"></i>
+							<i class="fa fa-star" ng-repeat="n in [] | range:5-hotel.our_rating"></i>
+						</div>
+						<div class="pull-left margin-left-10">
+							6 reviews
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+
+
+
+
+
+			</div>
+
+			<div class="col-md-8 col-sm-6 col-pull no-padding relative">
+
+				<div ng-include data-src="'assets/angular/templates/results/_popup-detail.html'"
+					 ng-show="showHotelPopup">
+				</div>
+
+				<div ng-include data-src="'assets/angular/templates/results/_map.html'">
+				</div>
+			</div>
+
+		</div>

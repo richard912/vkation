@@ -1,0 +1,59 @@
+<div ng-show="showPopup">
+	<div class="backdrop-custom"></div>
+	<div class="popup-orange">
+	<p><strong>WOULD LIKE TO ADD TRANSPORT IN YOUR VACATION.</strong></p>
+	<div class="clear10"></div>
+		<a href="" ng-click="add_transport(true)" class="btn-white">YES</a>
+		<a href="" ng-click="add_transport(false)" class="btn-white">NO</a>
+	</div>
+</div>
+<div class="rows">
+	<div class="col-lg-9 col-md-7 col-sm-12 no-padding map-area-lg">
+	<div class="col-lg-3 col-md-5 col-sm-12 no-padding location-info">
+		<div class="location-details-section">
+			<img src="assets/krr_303.png" class="img-responsive">
+			<div class="location-txt text-center">{{hotel.name}}</div>
+			<div class="padding20">
+				<div class="clear10"></div>
+				<div class="grey-section">
+					<div class="col-md-6 col-sm-6 col-xs-6 no-padding"><strong>FROM</strong> {{cart.startDate}}</div>
+					<div class="col-md-6 col-sm-6 col-xs-6 no-padding text-right"><strong>TO</strong> {{cart.endDate}}</div>
+					<div class="clear"></div>
+				</div>
+				<div class="activity-block">
+				<div class="orange-section">
+					<div class="col-md-6 col-sm-6 col-xs-6 no-padding">INR. {{perNightPrice}} X {{nights}} Nights</div>
+					<div class="col-md-6 col-sm-6 col-xs-6 no-padding text-right">INR. {{perNightPrice * nights}}</div>
+					<div class="clear"></div>
+				</div>
+					<div class="grey-section-small">
+						<div class="col-md-12 no-padding"><strong>ACTIVITIES/ATTRACTIONS</strong></div>
+						<div class="clear"></div>
+					</div>
+					<div class="clear10"></div>
+					<table class="table">
+		  				<tbody>
+			  				<tr ng-repeat="attraction in attractions">
+			  					<td class="text-left no-border-top">{{attraction.info.name}}</td>
+			  					<td class="text-right no-border-top">INR. {{attraction.info.price}}</td>
+			  				</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="orange-section">
+					<div class="col-md-6 col-sm-6 col-xs-6 no-padding">TOTAL</div>
+					<div class="col-md-6 col-sm-6 col-xs-6 no-padding text-right">INR. {{grandTotal}}</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div ng-include data-src="'assets/angular/templates/checkout/_map.html'">
+		</div>
+		
+	</div>
+</div>
+
+<div class="clear"></div>
+<div ng-include data-src="'assets/angular/templates/checkout/_payment_form.html'">
+</div>

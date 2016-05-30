@@ -1,0 +1,8 @@
+{:uriI"’file://app/assets/javascripts/angular/templates/base/base2.html?type=text/html&id=e13d6f5fa7d415e65aab9b3b0d462816822206530960125cfb6110b33b744c74:ET:load_pathI"app/assets/javascripts;T:filenameI"=app/assets/javascripts/angular/templates/base/base2.html;T:	nameI"!angular/templates/base/base2;T:logical_pathI"&angular/templates/base/base2.html;T:content_typeI"text/html;T:sourceI"l<div ng-include data-src="'assets/angular/templates/base/_header.html'">
+</div>
+<div ui-view="">
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Kfile-digest://app/assets/javascripts/angular/templates/base/base2.html;TTF:charsetI"
+utf-8;F:digest"%@Ñ„ıÉW58çÌO¯`Aé s·Ï¥şÃeL:lengthil:dependencies_digest"%TtÑì–“/JˆõÓÀ©Â¤ßë¹Cß‘Ù×GD­…w:idI"Ee13d6f5fa7d415e65aab9b3b0d462816822206530960125cfb6110b33b744c74;F:
+mtimel+¤#W

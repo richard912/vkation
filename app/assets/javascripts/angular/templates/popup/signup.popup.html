@@ -1,0 +1,133 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="close();" data-dismiss="modal">
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <h4 class="modal-title" id="smallModalHead">Sign up</h4>
+</div>
+<div class="modal-body">
+    <div class="clear20"></div>
+    <div class="orange-bg-text">
+        HELP US PERSONALIZE YOUR VACATION BY REGISTERING
+    </div>
+    <form name="signupForm"
+          ng-submit="signup(signupForm)"
+          rc-validate
+          novalidate class="signup-form">
+        <div class="clear20"></div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text"
+                     ng-model="first_name"
+                     id="name"
+                     name="name"
+                     placeholder="First Name"
+                     class="form-control"
+                     ng-maxlength="15" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text"
+                   ng-model="last_name"
+                   id="name"
+                   name="name"
+                   placeholder="Last Name"
+                   class="form-control"
+                   ng-maxlength="15" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email"
+                       ng-model="email"
+                       id="email"
+                       name="email"
+                       placeholder="Email"
+                       class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="password"
+                     ng-model="password"
+                     id="password"
+                     name="password"
+                     placeholder="Password (Atleast 8 Characters)"
+                     class="form-control"
+                     ng-minlength="8" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="password"
+                     ng-model="confirm_password"
+                     id="confirm_password"
+                     name="confirm_password"
+                     compare-to="password"
+                     placeholder="Confirm Password (Atleast 8 Characters)"
+                     class="form-control"
+                     ng-minlength="8" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text"
+                     ng-model="profession"
+                     id="profession"
+                     name="profession"
+                     placeholder="Profession"
+                     class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text"
+                     ng-model="age"
+                     id="age"
+                     name="age"
+                     min="1"
+                     numbers-only 
+                     placeholder="Age"
+                     class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="radio" name="gender" value="1"> 
+              <span class="radio-text">Male</span>
+              
+              <input type="radio" name="gender" value="1">
+              <span class="radio-text">Female</span>
+            
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="radio" name="marital_status"value="1"> 
+              <span class="radio-text">Married</span>
+              <input type="radio"name="marital_status"value="1"> 
+            <span class="radio-text">Single </span>
+          </div>
+          </div>
+          <div class="clear10"></div>
+        </div>
+        <button type="submit"
+                ng-disabled="isWorking"
+                class="btn btn-primary btn-block btn-lg btn-modal-white">{{buttonText}}</button>
+        <div class="clear20"></div>
+        <div class="bottom-line-2">
+            Already a vKation's member? <a ng-click="authenticate();" style="cursor:pointer;" >Login</a>
+        </div>
+        <div class="clear10"></div>
+    </form>
+    <div class="clear40"></div>
+    <p class="text-center">By Signing up, I agree to vKation's <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, <a href="#">Guest Refund Policy</a>, and <a href="#">Host Guarantee Terms</a>.</p>
+    <div class="clear20"></div>
+    <div class="bottom-line">
+        Already an vKation's member? <a ng-click="authenticate();" style="cursor:pointer;" >Login</a>
+    </div>
+    <div class="clear20"></div>
+</div>

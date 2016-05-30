@@ -1,0 +1,73 @@
+<div class="container-fluid bg-white">
+	<div class="col-md-8">
+		<div class="clear10"></div>
+		
+		<strong class="title pull-left">Review Summary</strong>
+
+		<div class="clear40"></div>
+
+		
+		
+		<div class="col-md-3 col-sm-3">
+			<!-- <img src="/assets/rsyrk.png" class="img-responsive center-block"> -->
+		</div>
+
+		<div class="col-md-3 col-sm-3">
+			<div class="rating-block text-center">
+				<div class="big-block">{{hotel.rating}}</div>
+				<div class="rating">
+					<i class="fa fa-star yellow-star color-add" ng-repeat="n in [] | range:hotel.our_rating"></i>
+					<i class="fa fa-star" ng-repeat="n in [] | range:5-hotel.our_rating"></i>
+				</div>
+				<div class="who-rated">Our rating</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-3">
+			<div class="rating-block text-center">
+				<div class="big-block">{{hotel.our_rating}}</div>
+				<div class="rating">
+					<i class="fa fa-star yellow-star color-add" ng-repeat="n in [] | range:hotel.rating"></i>
+					<i class="fa fa-star" ng-repeat="n in [] | range:5-hotel.rating"></i>
+				</div>
+				<div class="who-rated">Trip Advisor</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-3" style="padding-top:20px;">
+			{{attractions.length}} REVIEWS
+		</div>
+
+		
+
+		<div class="clear40"></div>
+
+		<div class="user-reviews" ng-repeat="attraction in attractions">
+
+			<div class="col-md-2"><img src="/assets/avatar-1.png" class="img-responsive img-circle user-reviews-photo center-block"></div>
+			<div class="col-md-10 text-left review">{{attraction.customer_reviews[0].reviews}}</div>
+
+			<div class="clear10"></div>
+		</div>
+
+		<div class="clear40"></div>
+
+
+		<!-- <div class="clear text-center-responsive">
+			<button class="btn btn-default btn-grey">View other reviews</button>
+		</div> -->
+
+
+		<!-- <div class="clear40"></div> -->
+
+
+
+
+
+
+		<div class="clear10"></div>
+
+
+	</div>
+
+</div>

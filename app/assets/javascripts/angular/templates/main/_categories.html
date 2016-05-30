@@ -1,0 +1,32 @@
+<div class="maxwidth options-block" ng-show="showCategories">
+    
+<div class="col-lg-12 col-xm-12 col-md-12 col-sm-12 dest-options" style="padding-top: 10px;">
+
+    <div class="clear10"></div>
+        <input ng-click="searchHotels()" ng-disabled="isWorking" type="button" class="col-xs-12 col-sm-12 orn-btn-active text-center btn-vacation-pkg" value="{{searchText}}">
+    <div class="clear10"></div>
+
+    <div ng-repeat="category in categories" class="col-lg-2 col-xm-2 col-md-2 col-sm-12">
+        
+        <div class="background relative options-drop-trigger-1">
+            <label for='{{category.name}}'><input type="checkbox" id="{{category.id}}"><span><img src="{{category.image_link}}" ng-click="showCategoryActivities($index);"  class="img-responsive center-block"></span></label>
+                <div class='options-list'>
+                    <div ng-repeat="c in selectedCategories">
+                    <div class="option-child" ng-if="category.id == c.id" ng-repeat="activity in category.activities">
+                        <input type="checkbox" id="{{activity.id}}" class="checkbox">
+                        <img ng-click="toggleActivitySelection(c.id, activity.id)" src="{{activity.image_link}}" ng-class="{'img-responsive center-block category-selected': activity.selected, 'img-responsive center-block': !activity.selected}">
+                    </div>   
+                    </div>          
+                </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<div style="clear:both; margin-top:60px;"></div>
+
+
+</div>

@@ -1,0 +1,64 @@
+{:uriI"ùfile://app/assets/javascripts/angular/templates/results/_popup-detail.html?type=text/html&id=f97c899d65abef520eccf5160bf644c6362c698aef7d86f7ca4fa6117a74e3ab:ET:load_pathI"app/assets/javascripts;T:filenameI"Happ/assets/javascripts/angular/templates/results/_popup-detail.html;T:	nameI",angular/templates/results/_popup-detail;T:logical_pathI"1angular/templates/results/_popup-detail.html;T:content_typeI"text/html;T:sourceI"	
+<div ng-click="closeHotelPopup()" class="close-map-over">X</div>
+<div class="map-over">
+    <div class="clear10"></div>
+    <div class="regular-padding">
+        <div class="flexslider2">
+            <div class="flexslider3">
+                <ul class="slides2">
+                    <li>
+                        <img src="assets/krr_303.png" class="img-responsive center-block">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="facility-detail">
+        <div class="pull-left"><h4>{{selectedHotel.name}}</h4></div>
+        <!--<div class="pull-right text-right type">-->
+            <!--PREMIUM-->
+            <!--<br>-->
+            <!--STUDIO ROOM-->
+        <!--</div>-->
+        <div class="clear"></div>
+        <hr>
+        <div class="pull-left">
+            <div class="ratings">
+                <div>
+                    Tripadvisor
+                    <i class="fa fa-star yellow-star" ng-repeat="n in [] | range:selectedHotel.rating"></i>
+                    <i class="fa fa-star" ng-repeat="n in [] | range:5-selectedHotel.rating"></i>
+                </div>
+                <div>
+                    Our Rating
+                    <i class="fa fa-star yellow-star" ng-repeat="n in [] | range:selectedHotel.our_rating"></i>
+                    <i class="fa fa-star" ng-repeat="n in [] | range:5-selectedHotel.our_rating"></i>
+                </div>
+            </div>
+        </div>
+        <div class="pull-right text-right">
+            <img src="assets/rupee_symbol-black.png" class="blk-currency">
+            <div><strong class="xlTxt">{{selectedHotel.total}}</strong></div>
+            <div class="small">PER NIGHT</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="regular-padding">
+        <h4>AMINITIES</h4>
+        <span ng-repeat="facility in selectedHotel.facilities">{{$index > 0 ? ' | ' : ''}} {{facility}}</span>
+    </div>
+    <div class="regular-padding">
+        <h4>ACTIVITIES IN & AROUND 100KM RADIUS</h4>
+        <p>
+            <span ng-repeat="a in attractions">{{$index > 0 ? ' | ' : ''}} {{a.name}}</span>
+        </p>
+    </div>
+
+    <div class="regular-padding">
+        <a ng-click="exploreByPopup()" class="btn btn-default btn-orange btn-lg btn-block">EXPLORE NOW</a>
+    </div>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Vfile-digest://app/assets/javascripts/angular/templates/results/_popup-detail.html;TTF:charsetI"
+utf-8;F:digest"%'≈«Då1◊Ñ≤›!dÛ¥ë÷5õòGú≈—©%ª:lengthi	:dependencies_digest"%≥åú‰UBçLΩÓÛ|Òí<É#π3Rô‰I r7'Ó:idI"Ef97c899d65abef520eccf5160bf644c6362c698aef7d86f7ca4fa6117a74e3ab;F:
+mtimel+§#W

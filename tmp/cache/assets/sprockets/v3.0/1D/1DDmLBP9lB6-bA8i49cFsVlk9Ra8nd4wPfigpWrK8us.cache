@@ -1,0 +1,30 @@
+{:uriI"file://app/assets/javascripts/angular/templates/checkout/_payment_form.html?type=text/html&id=aa02f44ab915d9e80812328232d0600638ee8c81af7e33ec4de21d6c49a34d32:ET:load_pathI"app/assets/javascripts;T:filenameI"Iapp/assets/javascripts/angular/templates/checkout/_payment_form.html;T:	nameI"-angular/templates/checkout/_payment_form;T:logical_pathI"2angular/templates/checkout/_payment_form.html;T:content_typeI"text/html;T:sourceI"<div class="container-fluid payment-form-area">
+	
+	<div class="content-full">
+		
+		<h3>Payment</h3>
+
+		<div class="clear20"></div>		
+
+		<div class="row">
+			
+			<div class="col-md-7">
+
+				<div class="row">
+
+					<div class="col-md-4">
+						<button ng-click="checkout()" class="btn btn-default btn-block btn-orange">CONTINUE</button>
+					</div>
+
+					<div class="col-md-8">
+						<a ui-sref="explore" class="back-link"><i class="fa fa-arrow-left fa-lg"></i> GO BACK</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Wfile-digest://app/assets/javascripts/angular/templates/checkout/_payment_form.html;TTF:charsetI"
+utf-8;F:digest"%â‹’éİÊŠ]P¯¿Ş›ù…CßÌ´F5TÂ)=RıÍ:lengthi:dependencies_digest"%0jÈNgÑoqÿ'Û@î«lûy<]ı-b¶µğı&6Y:idI"Eaa02f44ab915d9e80812328232d0600638ee8c81af7e33ec4de21d6c49a34d32;F:
+mtimel+¤#W

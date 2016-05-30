@@ -1,0 +1,18 @@
+{:uriI"õfile://app/assets/javascripts/angular/templates/explore/_about-host.html?type=text/html&id=c46ec765033512fbbec5f29c2bdab1ea3942d61d48f2de2a9fa39fb966286c08:ET:load_pathI"app/assets/javascripts;T:filenameI"Fapp/assets/javascripts/angular/templates/explore/_about-host.html;T:	nameI"*angular/templates/explore/_about-host;T:logical_pathI"/angular/templates/explore/_about-host.html;T:content_typeI"text/html;T:sourceI"/<div class="col-md-8">
+	
+	<strong class="title pull-left">About the Host</strong>
+	
+	<div class="clear20"></div>
+
+	<div class="col-md-2">
+		<img src="/assets/about_host.png" class="img-responsive img-circle center-block">
+	</div>
+	
+	<div class="col-md-10 text-left">{{hotel.description}}
+	</div>
+
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Tfile-digest://app/assets/javascripts/angular/templates/explore/_about-host.html;TTF:charsetI"
+utf-8;F:digest"%@£π≈ÆHwN9í[öÖ»2R˜çl$·S(B:lengthi/:dependencies_digest"%å·œP'–}πÓJ£:â≤CuW%.ÕEÙ=óÜÌ˜]:idI"Ec46ec765033512fbbec5f29c2bdab1ea3942d61d48f2de2a9fa39fb966286c08;F:
+mtimel+§#W

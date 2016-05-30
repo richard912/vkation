@@ -1,0 +1,97 @@
+<!-- <div ng-show="showPopup">
+	<div class="backdrop-custom"></div>
+
+	<div class="popup-orange">
+	<p><strong>WOULD LIKE TO ADD ACTIVITIES & ACTTRATIONS IN YOUR VACATION.</strong></p>
+	<div class="clear10"></div>
+		<a href="" ng-click="add_attractions(true)" class="btn-white">YES</a>
+		<a href="" ng-click="add_attractions(false)" class="btn-white">NO</a>
+	</div>
+</div> -->
+
+<div ng-show="showTransportPopup">
+	<div ng-include data-src="'/assets/angular/templates/explore/_show-transport-popup.html'"></div>
+</div>
+
+<div class="bg-white">
+	<div class="header">
+		<div ng-include data-src="'assets/angular/templates/results/_results-header.html'">
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="">
+		<div class="banner">
+			<flex-slider slide="s in imageArray">
+				<li>
+					<img ng-src="{{s}}">
+				</li>
+			</flex-slider>
+		</div>
+	</div>
+<div class="container-fluid">
+	<div class="col-md-12 no-padding">
+		<div class="col-md-8">
+			<div class="white-bg">
+				<div class="pull-left"><h1 class="top-title">{{hotel.name}}</h1></div>
+				<div class="pull-right"><h1 class="reviews-rt">2 Reviews</h1></div>
+				<div class="clear"></div>
+				<div class="pull-left">
+					<div class="ratings">
+						<div>
+							<span>Tripadvisor </span>
+							<i class="fa fa-star yellow-star"></i>
+							<i class="fa fa-star yellow-star"></i>
+							<i class="fa fa-star yellow-star"></i>
+							<i class="fa fa-star yellow-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+				</div>
+				<div class="pull-left right-space">
+					<div class="ratings">
+						<div>
+							<span>Our rating </span>
+							<i class="fa fa-star yellow-star"></i>
+							<i class="fa fa-star yellow-star"></i>
+							<i class="fa fa-star yellow-star"></i>
+							<i class="fa fa-star yellow-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+				</div>
+				<div class="clear10"></div>
+				<div class="col-md-12 style">
+					{{hotel.description}}
+				</div>
+				<div class="clear10"></div>
+			</div>
+			<div id="mapDiv" class="map relative">
+				<div ng-include data-src="'assets/angular/templates/explore/_map.html'">
+
+				</div>
+			</div>
+			<div class="tab-bg">
+				<div class="btn-group tab-btn" role="group">
+					<button type="button" class="btn btn-default btn-lg tab-button-current">SUMMARY</button>
+					<button type="button" class="btn btn-default btn-lg tab-button">ACCOMMODATION DETAILS</button></div>
+				</div>
+				<div ng-include data-src="'assets/angular/templates/explore/_activities-nearby.html'"></div>
+			</div>
+			<div ng-include data-src="'assets/angular/templates/explore/_checkout-form.html'"></div>
+		</div>
+	</div>
+</div>
+<div class="clear40"></div>
+<div ng-include data-src="'assets/angular/templates/explore/_reviews.html'"></div>
+<div class="clear40"></div>
+<div class="container-fluid">
+	<div ng-include data-src="'assets/angular/templates/explore/_about-host.html'"></div>
+	<div class="clear40"></div>
+	<div ng-include data-src="'assets/angular/templates/explore/_more-results.html'"></div>
+	<div class="clear40"></div>
+	<div class="col-md-2"><a ui-sref="results-index" class="btn btn-default btn-block btn-orange">Show more listing</a></div>
+	<div class="col-md-10 txt-top-resp">Explore other options. More places to stay.</div>
+</div>
+<div class="clear40"></div>
+<div ng-include data-src="'assets/angular/templates/base/_footer.html'">
+</div>

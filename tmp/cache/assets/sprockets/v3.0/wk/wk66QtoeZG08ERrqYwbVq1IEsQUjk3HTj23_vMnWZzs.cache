@@ -1,0 +1,77 @@
+{:uriI"˜file://app/assets/javascripts/angular/templates/explore/_reviews.html?type=text/html&id=7290303165e15c15619b7100fe2a924bb94f5fafa6b54c3e32cd81868ab30bf9:ET:load_pathI"app/assets/javascripts;T:filenameI"Capp/assets/javascripts/angular/templates/explore/_reviews.html;T:	nameI"'angular/templates/explore/_reviews;T:logical_pathI",angular/templates/explore/_reviews.html;T:content_typeI"text/html;T:sourceI"<<div class="container-fluid bg-white">
+	<div class="col-md-8">
+		<div class="clear10"></div>
+		
+		<strong class="title pull-left">Review Summary</strong>
+
+		<div class="clear40"></div>
+
+		
+		
+		<div class="col-md-3 col-sm-3">
+			<!-- <img src="/assets/rsyrk.png" class="img-responsive center-block"> -->
+		</div>
+
+		<div class="col-md-3 col-sm-3">
+			<div class="rating-block text-center">
+				<div class="big-block">{{hotel.rating}}</div>
+				<div class="rating">
+					<i class="fa fa-star yellow-star color-add" ng-repeat="n in [] | range:hotel.our_rating"></i>
+					<i class="fa fa-star" ng-repeat="n in [] | range:5-hotel.our_rating"></i>
+				</div>
+				<div class="who-rated">Our rating</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-3">
+			<div class="rating-block text-center">
+				<div class="big-block">{{hotel.our_rating}}</div>
+				<div class="rating">
+					<i class="fa fa-star yellow-star color-add" ng-repeat="n in [] | range:hotel.rating"></i>
+					<i class="fa fa-star" ng-repeat="n in [] | range:5-hotel.rating"></i>
+				</div>
+				<div class="who-rated">Trip Advisor</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-3" style="padding-top:20px;">
+			{{attractions.length}} REVIEWS
+		</div>
+
+		
+
+		<div class="clear40"></div>
+
+		<div class="user-reviews" ng-repeat="attraction in attractions">
+
+			<div class="col-md-2"><img src="/assets/avatar-1.png" class="img-responsive img-circle user-reviews-photo center-block"></div>
+			<div class="col-md-10 text-left review">{{attraction.customer_reviews[0].reviews}}</div>
+
+			<div class="clear10"></div>
+		</div>
+
+		<div class="clear40"></div>
+
+
+		<!-- <div class="clear text-center-responsive">
+			<button class="btn btn-default btn-grey">View other reviews</button>
+		</div> -->
+
+
+		<!-- <div class="clear40"></div> -->
+
+
+
+
+
+
+		<div class="clear10"></div>
+
+
+	</div>
+
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Qfile-digest://app/assets/javascripts/angular/templates/explore/_reviews.html;TTF:charsetI"
+utf-8;F:digest"%,IÞ´©´ÿrò–G4®_°ù™èÐ}ïáªkøq¬ø8:lengthi<:dependencies_digest"%%zx»`iˆç,úD×dšö	'éœE[Ãò¡”Þ¢:idI"E7290303165e15c15619b7100fe2a924bb94f5fafa6b54c3e32cd81868ab30bf9;F:
+mtimel+¤#W

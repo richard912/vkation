@@ -1,0 +1,1 @@
+Razorpay.setup("rzp_test_JkKRub0IbNEK3U", "izy5lWuydcmdMEPQOVbi5r3c")

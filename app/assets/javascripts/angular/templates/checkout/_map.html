@@ -1,0 +1,20 @@
+<div id="googleMap">
+    <ng-map class=map style="height:100% !important" zoom="8" center="[{{hotel.latitude}}, {{hotel.longitude}}]">
+        <directions ng-repeat="attraction in attractions"
+                    draggable="true"
+                    travel-mode="DRIVING"
+                    origin="{{hotel.latitude}}, {{hotel.longitude}}"
+                    destination="{{attraction.info.latitude}}, {{attraction.info.longitude}}">
+        </directions>
+        <custom-marker ng-repeat="attraction in attractions"
+                       position="{{attraction.info.latitude}}, {{attraction.info.longitude}}">
+            <i class="fa fa-map-marker point-details orange-point" style="top: 400px; left: 150px;">
+            </i>
+            <div class="point-info-block clearfix">
+                <div style="text-align:center">{{attraction.info.name}}</div>
+            </div>
+        </custom-marker>
+        <marker position="{{hotel.latitude}}, {{hotel.longitude}}">
+        </marker>
+    </ng-map>
+</div>

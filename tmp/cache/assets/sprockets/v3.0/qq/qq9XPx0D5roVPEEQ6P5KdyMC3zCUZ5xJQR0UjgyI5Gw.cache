@@ -1,0 +1,44 @@
+{:uriI"îfile://app/assets/javascripts/angular/templates/explore/_map.html?type=text/html&id=faebf81f35c1aa44ee7634f117b1ce05740bf3a0e541a39a79ca7e754c9e0483:ET:load_pathI"app/assets/javascripts;T:filenameI"?app/assets/javascripts/angular/templates/explore/_map.html;T:	nameI"#angular/templates/explore/_map;T:logical_pathI"(angular/templates/explore/_map.html;T:content_typeI"text/html;T:sourceI"ı<div id="googleMap">
+    <ng-map class=map style="height:100% !important" zoom="8" center="[{{hotel.latitude}}, {{hotel.longitude}}]">
+        <shape name="circle"
+               radius="100000"
+               stroke-color="#F78320"
+               stroke-opacity="0.8"
+               center="[{{hotel.latitude}}, {{hotel.longitude}}]"
+        >
+        </shape>
+        <!-- Attraction' Markers -->
+        <custom-marker ng-repeat="attraction in markers"
+                       position="{{attraction.latitude}}, {{attraction.longitude}}">
+            <i class="fa fa-map-marker point-details orange-point" style="top: 400px; left: 150px;">
+            </i>
+            <div class="point-info-block clearfix">
+                <div class="ind-currency">&#x20b9;</div>
+                <div class="white-box">
+                    <a ng-click="showAttractionPopup(attraction);" style="cursor:pointer">VIEW DETAILS</a>
+                </div>
+                <div class="pull-left">{{attraction.name}}</div>
+                <div class="pull-right text-center">{{attraction.price}}<div>PER HOUR</div></div>
+            </div>
+        </custom-marker>
+        <!-- Attraction' Markers ends -->
+        <!-- Hotel Marker -->
+        <custom-marker position="{{hotel.latitude}}, {{hotel.longitude}}" on-click="showHotelPopup()">
+            <i class="fa fa-map-marker orange point-details orange-point" style="top: 400px; left: 150px;">
+            </i>
+            <div class="point-info-block clearfix">
+                <div class="ind-currency">&#x20b9;</div>
+                <div class="pull-left">{{hotel.name}}</div>
+                <div class="pull-right text-center" style="margin-top:7px">{{hotel.total}}</div>
+            </div>
+        </custom-marker>
+        <!-- Hotel Marker ends -->
+    </ng-map>
+
+    <div ng-include src="'/assets/angular/templates/explore/attraction-detail.html'" ng-show="attractionPopup"></div>
+    <div ng-include src="'/assets/angular/templates/explore/hotel-detail.html'" ng-show="hotelPopup"></div>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Mfile-digest://app/assets/javascripts/angular/templates/explore/_map.html;TTF:charsetI"
+utf-8;F:digest"%á1¢<Fü…bØV"4zôÕ[–’£9Yßx›°I>ŸD:lengthiı:dependencies_digest"%UL€]jbb˘¨*·‹¡ê”µY]kæ8à9‘æ¨Y:idI"Efaebf81f35c1aa44ee7634f117b1ce05740bf3a0e541a39a79ca7e754c9e0483;F:
+mtimel+§#W

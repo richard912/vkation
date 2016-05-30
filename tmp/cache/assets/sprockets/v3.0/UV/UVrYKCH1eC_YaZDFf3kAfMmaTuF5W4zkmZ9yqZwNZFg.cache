@@ -1,0 +1,37 @@
+{:uriI"˜file://app/assets/javascripts/angular/templates/main/_categories.html?type=text/html&id=f7749a2fd8f12f38b9ec92dcb036c4c136116b96d5153a4b2c7b55cabec9d341:ET:load_pathI"app/assets/javascripts;T:filenameI"Capp/assets/javascripts/angular/templates/main/_categories.html;T:	nameI"'angular/templates/main/_categories;T:logical_pathI",angular/templates/main/_categories.html;T:content_typeI"text/html;T:sourceI"ú<div class="maxwidth options-block" ng-show="showCategories">
+    
+<div class="col-lg-12 col-xm-12 col-md-12 col-sm-12 dest-options" style="padding-top: 10px;">
+
+    <div class="clear10"></div>
+        <input ng-click="searchHotels()" ng-disabled="isWorking" type="button" class="col-xs-12 col-sm-12 orn-btn-active text-center btn-vacation-pkg" value="{{searchText}}">
+    <div class="clear10"></div>
+
+    <div ng-repeat="category in categories" class="col-lg-2 col-xm-2 col-md-2 col-sm-12">
+        
+        <div class="background relative options-drop-trigger-1">
+            <label for='{{category.name}}'><input type="checkbox" id="{{category.id}}"><span><img src="{{category.image_link}}" ng-click="showCategoryActivities($index);"  class="img-responsive center-block"></span></label>
+                <div class='options-list'>
+                    <div ng-repeat="c in selectedCategories">
+                    <div class="option-child" ng-if="category.id == c.id" ng-repeat="activity in category.activities">
+                        <input type="checkbox" id="{{activity.id}}" class="checkbox">
+                        <img ng-click="toggleActivitySelection(c.id, activity.id)" src="{{activity.image_link}}" ng-class="{'img-responsive center-block category-selected': activity.selected, 'img-responsive center-block': !activity.selected}">
+                    </div>   
+                    </div>          
+                </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<div style="clear:both; margin-top:60px;"></div>
+
+
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Qfile-digest://app/assets/javascripts/angular/templates/main/_categories.html;TTF:charsetI"
+utf-8;F:digest"%—f³xL=]Øˆø§Ù0À×ýû˜õWM@sªƒk—a:lengthiú:dependencies_digest"%a¢q¦ŸÊ	"½’ßŒÐ‘È V!8
+@d6¼ýh_ðð¨F:idI"Ef7749a2fd8f12f38b9ec92dcb036c4c136116b96d5153a4b2c7b55cabec9d341;F:
+mtimel+¤#W

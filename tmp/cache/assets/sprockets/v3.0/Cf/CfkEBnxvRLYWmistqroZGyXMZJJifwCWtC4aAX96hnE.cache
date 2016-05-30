@@ -1,0 +1,9 @@
+{:uriI"žfile://app/assets/javascripts/angular/templates/explore/_marker-window.html?type=text/html&id=640fbe47bcc8d2a484bfe1655059aaedb37221e831aa3b0445866efa87946d4b:ET:load_pathI"app/assets/javascripts;T:filenameI"Iapp/assets/javascripts/angular/templates/explore/_marker-window.html;T:	nameI"-angular/templates/explore/_marker-window;T:logical_pathI"2angular/templates/explore/_marker-window.html;T:content_typeI"text/html;T:sourceI"z<div>
+    <div class="pull-left">{{parameter.price}}</div>
+    <!-- <a ng-click="test()">View Details</a> -->
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Wfile-digest://app/assets/javascripts/angular/templates/explore/_marker-window.html;TTF:charsetI"
+utf-8;F:digest"%È©%ñ\·ê(!&’ê¶=ªÍÆxOðEªl™RÉÈ:lengthiz:dependencies_digest"%¢—Å+µ£´Bˆº'GÿR÷qTA u[ä¼}:idI"E640fbe47bcc8d2a484bfe1655059aaedb37221e831aa3b0445866efa87946d4b;F:
+mtimel+¤#W

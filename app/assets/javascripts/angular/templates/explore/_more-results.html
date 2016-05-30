@@ -1,0 +1,48 @@
+<!-- put a ng-repeat on it and show the exact top search here -->
+<div class="col-md-4" ng-repeat="hotel in hotelList | limitTo:3">
+	
+	<div class="photo-block-wrapper">
+		<div class="photo-block relative">
+<!-- 
+			<img src="/assets/40.png" class="save-badge">
+			<img src="/assets/love.png" class="love-badge"> -->
+
+			<div class="info-block">
+				<img src="/assets/rupee_symbol.png" class="currency-sign">
+				<div class="price">{{hotel.total}}</div>
+				<div class="time">PER NIGHT</div>
+			</div>
+
+			<div class="flexslider21">
+				<div class="flexslider1">
+					<ul class="slides1">
+						<li>
+							<img src="/assets/krr_303.png" class="img-responsive center-block">
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="item-title"><h4>{{hotel.name}}</h4></div>
+		
+		<div class="ratings">
+			<div class="pull-left">
+				Tripadvisor 
+				<i class="fa fa-star yellow-star color-add" ng-repeat="n in [] | range:hotel.rating"></i>
+				<i class="fa fa-star" ng-repeat="n in [] | range:5-hotel.rating"></i>
+			</div>
+			<div class="pull-left margin-left-10">
+				Our Rating 
+				<i class="fa fa-star yellow-star color-add" ng-repeat="n in [] | range:hotel.our_rating"></i>
+				<i class="fa fa-star" ng-repeat="n in [] | range:5-hotel.our_rating"></i>
+			</div>
+			<!-- <div class="pull-left margin-left-10">
+				6 reviews
+			</div> -->
+		</div>
+
+	</div>						
+
+</div>

@@ -1,0 +1,91 @@
+    <!-- Header Section Starts Here -->
+    <div id="header_wrapper">
+    <div class="container-fluid">
+
+        <div id="video-container">
+            <video loop preload="none" poster="/assets/headerv.png" id="bgvid">
+                <source src="/assets/Paris.mp4" type="video/mp4">
+            </video>
+            <div class="row clearfix" style="margin:0px;">
+                <div class="col-lg-12 col-md-12 col-sm-12 clearfix" style="margin:0px; padding:0px;">
+                    <div class="header_right text-right">
+                        <nav class="navbar navbar-inverse navbar-right">
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                              <ul class="nav navbar-nav">
+                                    <li class="last"><a href="#">Become a Host</a></li>
+                                    <li><a href="#">Help</a></li>
+                                    <li ng-if="!isLoggedIn"><a style="cursor:pointer; color:#fff;" ng-click="openSignUpPopup();">Sign Up</a></li>
+                                    <li ng-if="isLoggedIn">{{user.first_name}} {{user.last_name}}</li>
+                                    <li ng-if="!isLoggedIn">
+                                        <a ng-click="openLoginPopup();" style="cursor:pointer; color:#fff;" >Login</a>
+                                    </li>
+                                    <li ng-if="isLoggedIn">
+                                        <a ng-click="logout();" confirm="Are you sure you want to logout?" style="cursor:pointer; color:#fff;">Logout</a>
+                                    </li>
+                              </ul>
+                            </div><!--/.nav-collapse -->
+                        </nav>
+                    </div>
+
+                    <div class="header_left">
+                        <a href="#"><img src="/assets/logo-A.jpg" width="185px" height="165px"></a>
+                    </div>
+                    
+                
+                </div>
+                <div ng-hide='!showForm' class="col-lg-12 col-xm-12 col-md-12 col-sm-12" style="margin:0px; padding:0px;">
+                    <div class="header_content">
+                        <h1>START YOUR VACATION NOW!</h1>
+                        <span class="gap-one">&nbsp;</span>
+                        <h2>What are you looking for ?</h2>
+                        <span class="gap-two">&nbsp;</span>
+                    </div>
+                </div>
+                <div class="container" ng-hide='!showForm'>
+                    <div class="row img-boxes-1">
+                        <div class="col-md-6 col-sm-6 text-right">
+                            <a href="#" ng-click="getForm('custom');" class="trigger-pkgs"><img src="/assets/cp.jpg" class="img-response" alt="Accommodation"></a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 text-left">
+                            <a href="#" ng-click="getForm('best');" class="trigger-pkgs"><img src="/assets/bd.jpg" class="img-response" alt="Best Deails"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear20"></div>
+
+                    
+                <div class="pkg-frm-block" ng-hide='showForm'>
+
+                    <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12 header_container">
+                        <h1 class="col-lg-12 col-xm-12 col-md-12 col-sm-12">{{text_type}}</h1>
+                    </div>
+
+                    <div class="clear20"></div>
+
+                   <div ng-include data-src="'assets/angular/templates/main/_search-form.html'">  
+
+                    <div class="maxwidth">
+                        <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12">
+                            <div class="resort-from">
+                                <div class="clear"></div>
+                            </div>
+                        </div>  
+                    </div>
+                    
+                    <div ng-include data-src="'assets/angular/templates/main/_categories.html'">
+                    <div id="fade" class="black_overlay"></div>
+            </div>
+        </div>
+    </div>
+</div>      
+
+<div ng-include data-src="'assets/angular/templates/main/_footer.html'">        

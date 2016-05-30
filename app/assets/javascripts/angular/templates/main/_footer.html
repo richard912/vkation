@@ -1,0 +1,193 @@
+<!-- Content Section Starts Here -->
+<div class="fullcontentwrapper">
+    <div class="container">
+        <div class="row">
+            <div id="content_wrapper" class="col-lg-12 col-xm-12 col-md-12 col-sm-12">
+                
+                
+                <div class="clear"></div>
+                
+                <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12">
+                    <div class="destinationhead">
+                        Destinations
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12">
+                    <div class="destinationsub">
+                        Discover new, Inspiring Places Close to Home. 
+                    </div>
+                </div>  
+                
+                <div class="clear"></div>
+                
+                <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12 box4wrapper">
+                    <div class="col-lg-8 col-xm-8 col-md-8 col-sm-8 text-left">
+                        <img src="/assets/coorg-1.jpg" style="cursor: pointer;width:100%;" class="img-response" alt="coorg">
+                    </div>
+                    <div class="col-lg-4 col-xm-4 col-md-4 col-sm-4 text-right">
+                        <img src="/assets/bylakuppe-1.jpg" class="img-response" alt="bylakuppe" style="width:100%;">
+                    </div>  
+                </div>
+                
+                <div class="clear"></div>
+                
+                <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12 box3wrapper">
+                    <div class="col-lg-4 col-xm-4 col-md-4 col-sm-4 text-left">
+                        <img src="/assets/chikmangalur-1.jpg" class="img-response" alt="chikmangalur" style="width:100%;">
+                    </div>
+                    <div class="col-lg-4 col-xm-4 col-md-4 col-sm-4 text-center">
+                        <img src="/assets/mysore-1.jpg" class="img-response" alt="mysore" style="width:100%;">
+                    </div>  
+                    <div class="col-lg-4 col-xm-4 col-md-4 col-sm-4 text-right">
+                        <img src="/assets/bangalore-1.jpg" class="img-response" alt="bangalore" style="width:100%;">
+                    </div>
+                </div>
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>  
+</div>
+<!-- Content Section Ends Here -->
+        
+<!-- Footer Section Starts Here -->
+<div id="footer_wrapper">
+    <div class="footer">
+        <div class="row">
+            
+                <div class="col-lg-4 col-md-4 col-sm-6" style="padding: 0;">
+                    <div class="footerright1">
+                        <strong>Company</strong>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Policies</a></li>
+                            <li><a href="#">Disaster Response</a></li>
+                            <li><a href="#">Terms & Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" style="padding: 0;">
+                    <div class="footerright1">
+                        <strong>Discover</strong>
+                        <ul>
+                            <li><a href="#">Trust & Safety</a></li>
+                            <li><a href="#">Invite Friends</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Our Picks</a></li>
+                            <li><a href="#">Mobile</a></li>
+                            <li><a href="#">Site Maps</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" style="padding: 0;">    
+                    <div class="footerright1">
+                        <strong>Hosting</strong>
+                        <ul>
+                            <li><a href="#">Why Host</a></li>
+                            <li><a href="#">Hospitality</a></li>
+                            <li><a href="#">Responsible Hosting</a></li>
+                            <li><a href="#">Home Safety</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+        </div>  
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+        <div class="col-lg-12 col-xm-12 col-md-12 col-sm-12" style="padding: 0;">
+            <div class="joinus">Join Us On</div>
+            <div class="socialimages">
+                <a href="https://www.facebook.com/" target="_blank"><img src="/assets/icon-fb.png" alt="Facebook"></a>
+                <a href="https://plus.google.com/" target="_blank"><img src="/assets/icon-google.png" alt="Google-Plus"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="/assets/icon-instagram.png" alt="Instagram"></a>
+                <a href="https://in.pinterest.com/" target="_blank"><img src="/assets/icon-pinterest.png" alt="Pinterest"></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><img src="/assets/icon-twitter.png" alt="Twitter"></a>
+                <a id="rzp-button1"><img src="/assets/cards_bank-512.png" alt="test payment"></a>
+            </div>
+        </div>
+    </div>      
+</div>
+<!-- Footer Section Ends Here -->
+
+
+<form action="/api/auths/payment" method="POST">
+        <script
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="rzp_test_yID6r4wtoDxBy6"
+
+            data-amount="500"
+            data-name="zeeshan"
+            data-description="test"
+            data-image="/assets/logo-A.jpg"
+
+            data-prefill.name="aftab"
+            data-prefill.email="aftab@gems.techverx.com"
+            data-theme.color="#F37254"
+        >
+        </script>
+        <input type="hidden" value="test booking id" name="product_id">
+        <input type="hidden" value=" aftab's id" name="user_id">
+</form>
+<script type="text/javascript">
+$(document).ready(function(){
+  var options = {
+      "key": "rzp_test_yID6r4wtoDxBy6",
+      "amount": "500",
+      "name": "zeeshan",
+      "description": "test",
+      "image": "/assets/logo-A.jpg",
+      "handler": function (response){
+        var mapForm = document.createElement("form");
+        mapForm.target = "_self";
+        mapForm.method = "POST"; // or "post" if appropriate
+        mapForm.action = "/api/auths/payment";
+
+        var mapInput = document.createElement("input");
+        mapInput.type = "text";
+        mapInput.name = "payment_id";
+        mapInput.value = response.razorpay_payment_id;
+        mapForm.appendChild(mapInput);
+
+        var mapInput2 = document.createElement("input");
+        mapInput2.type = "text";
+        mapInput2.name = "user_id";
+        // mapInput2.value = "<%= "#{current_user.id}" %>";
+        mapInput2.value = "1";
+
+        var mapInput3 = document.createElement("input");
+        mapInput3.type = "text";
+        mapInput3.name = "product_id";
+        // mapInput3.value = "<%= "#{@product.id}" %>";
+        mapInput3.value = "1";
+
+        mapForm.appendChild(mapInput);
+        mapForm.appendChild(mapInput2);
+        mapForm.appendChild(mapInput3);
+
+        mapForm.submit();
+
+      },
+      "prefill": {
+          "name": "aftab",
+          "email": "aftabaig@gmail.com"
+      },
+      "notes": {
+          "address": "Hello World"
+      },
+      "theme": {
+          "color": "#198F69"
+      }
+  };
+  $("#rzp-button1").click(function(e){
+    var rzp1 = new Razorpay(options);
+      rzp1.open();
+      e.preventDefault();
+  });
+
+});
+</script>

@@ -1,0 +1,97 @@
+<div class="clear20"></div>
+<div class="">
+	<strong class="title pull-left">Amenities</strong>
+	<div class="col-md-2"></div>
+	<div class="col-md-7">
+		<span class="amenity-color" ng-if="hotel.facilities" ng-repeat="facility in hotel.facilities">{{facility}} | </span>
+		<span class="amenity-color" ng-if="!hotel.facilities">Amenities for this location are not available</span>
+
+	</div>
+</div>
+<div class="clear10"></div>
+<div class="grey-line"></div>
+<div class="clear10"></div>
+<div class="table-responsive no-brd-tbl">
+	<table class="table">
+		<tr>
+			<td>Activities Around</td>
+			<td>Quick Facts</td>
+		</tr>
+		<tr ng-repeat="a in attractions">
+			<td class="act-around-photo">
+				<img src="{{a.image_link}}" class="img-responsive activity-around attraction-img">
+			</td>
+			<td>
+				<h4>{{a.name}}
+					<span> INR. {{a.price}}</span>
+				</h4>
+				<p>{{a.about}}</p>
+				<a ng-click="showAttractionPopup(a)" href="#mapDiv" du-smooth-scroll class="cart-button">Add to Cart</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="act-around-photo"></td>
+			<td>
+				<a href="#">more activities <i class="fa fa-caret-down fa-lg"></i></a>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+<div class="clear10"></div>
+
+<div class="grey-line"></div>
+
+<strong class="title pull-left">Accommodation</strong>
+<div class="clear10"></div>
+<div class="col-md-2"></div>
+<div class="col-md-10">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis <br>magnam maxime odit distinctio nihil. Quis excepturi reprehenderit magni<br> eum nostrum, quo, cupiditate, sunt velit quisquam ut distinctio ab sint nulla?</p>
+</div>
+
+<div class="clear10"></div>
+
+<div class="grey-line"></div>
+
+<strong class="title pull-left">Safety Features</strong>
+<div class="clear10"></div>
+<div class="col-md-2"></div>
+<div class="col-md-10">
+	<ul>
+		<li>Smoke Detector</li>
+		<li>First Aid kit</li>
+		<li>Fire Extinguisher</li>
+	</ul>
+</div>
+
+<div class="clear20"></div>
+
+<strong class="title">Photos</strong>
+
+<div class="clear20"></div>
+
+
+<div class="photos-grid">
+	<div class="clearfix">
+		<div class="col-md-6">
+			<a href="#" class="box-50" style="background:url('/assets/pg-1.jpg');"></a>
+		</div>
+		<div class="col-md-6">
+			<a href="#" class="box-50" style="background:url('/assets/pg-2.jpg');"></a>
+		</div>
+		<div class="col-md-4">
+			<a href="#" class="box-33" style="background:url('/assets/pg-3.jpg');"></a>
+		</div>
+		<div class="col-md-4">
+			<a href="#" class="box-33" style="background:url('/assets/pg-4.jpg');"></a>
+		</div>
+		<div class="col-md-4">
+			<a href="#" class="box-33" style="background:url('/assets/pg-5.jpg');">
+				see all 10 photos
+			</a>
+		</div>
+	</div>
+</div>
