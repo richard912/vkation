@@ -8,6 +8,7 @@ class Api::V1::SessionsController < Api::V1::BaseController
 	        render :json => {
 	        	:success => true,
 	        	:user => @user
+
 	        	}, :status => 200
 	    else
 	    	render :json => {
@@ -19,6 +20,7 @@ class Api::V1::SessionsController < Api::V1::BaseController
 	  # POST /users/logout
 	def destroy
 	    if current_user.present?
+	    	
 	  	# current_user.api_token = nil
 	  	# current_user.save!
 	    sign_out

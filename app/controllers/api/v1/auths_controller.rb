@@ -6,6 +6,7 @@ class Api::V1::AuthsController < Api::V1::BaseController
               @fb_user = @oauth.formatted_user_data
               @user = User.find_by_email(@fb_user[:email])
               unless @user
+
                 @user = User.create(
                     :email => @fb_user[:email],
                     :first_name => @fb_user[:first_name],
@@ -14,9 +15,12 @@ class Api::V1::AuthsController < Api::V1::BaseController
                     :password => @fb_user[:uid],
                     :password_confirmation => @fb_user[:uid],
                     :api_token => SecureRandom.uuid
+              
                 )
               else
+
                 @user.api_token = SecureRandom.uuid
+              
                 @user.save!
               end
             else
